@@ -15,11 +15,22 @@
 
 	<div class="ctverecek zeleny"></div>
 
+	<div class="odstavec" onmouseover="ztucni(event)" onmouseout="odtucni()">V elipse spí lev.</div>
+	<button class="tlacitko" onclick="makeRed()">červený po kliknutí</button>
+	<button class="tlacitko" onclick="makeBigger()">větší po kliknutí</button>
+
 	<img class="obrazek" src="obrazky/kocka.jpg">
 
 	<button class="tlacitko">Čudlajs</button>
 
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
-
+	<audio id="js-audio" src="audio/dingdingdang.mp3" preload="auto"></audio>
+	<button onclick="prehraj('#js-audio')">prehraj pesničku</button>
+	<button onclick="zastav('#js-audio')">zastav pesničku</button>
+	<button onclick="setVolume('#js-audio', 0)">volume pesničky na 0</button>
+	<button onclick="setVolume('#js-audio', 0.5)">volume pesničky na 0.5</button>
+	<button onclick="setVolume('#js-audio', 1)">volume pesničky na 1</button>
+	<button onclick="vrat('#js-audio')">vráť pesničku na začiatok</button>
+	<script src="main.js"></script>
+	
 </body>
 </html>
